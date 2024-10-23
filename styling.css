@@ -1,0 +1,228 @@
+
+/*
+@media screen and (max-width: 450px) {
+    
+}
+@media screen and (min-width: 451px) and (max-width: 650px) {
+    
+}
+@media screen and (min-width: 651px) and (max-width: 850px) {
+    
+}
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+    
+}
+@media screen and (min-width: 450px) {
+    
+}
+
+*/
+
+@keyframes fadeOut {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@font-face {
+    font-family: "daniel";
+    src: url("Daniel-Regular.otf");
+}
+
+@font-face {
+    font-family: "sniglet regular";
+    src: url("Sniglet-Regular.otf");
+}
+
+@font-face {
+    font-family: "sniglet extra bold";
+    src: url("Sniglet-ExtraBold.otf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    font-family: "daniel";
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(109, 105, 49);
+}
+.name{
+    font-family: "sniglet extra bold";
+    color: rgb(219, 197, 0);
+}
+.nav-button{
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+}
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(219, 197, 0);
+}
+.hero-main-text, .section-title{
+    font-family: "sniglet extra bold";
+}
+.hero-sub-text{
+    font-size: 2rem;
+}
+.hero-right{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    color: rgb(219, 197, 0);
+}
+.hero-right::-webkit-scrollbar{
+    display: none;
+}
+.topic-box a{
+    color: rgb(219, 197, 0);
+    text-decoration: none;
+}
+@media screen and (max-width: 450px) {
+    nav
+    {height: 50px;}
+    .name
+    {margin: 0px 30px; font-size: 2rem;}
+    .nav-button
+    {height: 40px; width: 80px; margin: 0px 50px; font-size: 2rem;}
+    .hero
+    {width: 100%; padding: 60px 0px;}
+    .hero-left, .hero-right
+    {width: 95%; margin: 0px auto;}
+    .hero-main-text
+    {width: 95%; margin: 20px auto; color: rgb(109, 105, 49); font-size: 4rem; letter-spacing: 0px;}
+    .hero-sub-text
+    {width: 95%; margin: 150px auto 20px;}
+    .topic-box
+    {height: 200px; width: 40%; margin: 5px; padding: 0px 10px; background-color: black; background-position: center; background-attachment: local; background-size: cover; animation: fadeOut 2s forwards; animation-timeline: scroll();}
+    .fine-dining{background-image: url("pexels-adrien-olichon-fine-dining-resized.jpg"); color: white;}
+    .beaches{background-image: url("pexels-fabianwiktor-beaches-resized.jpg");}
+    .coffee{background-image: url("pexels-chevanon-coffee-resized.jpg");}
+    .galleries{background-image: url("pexels-unalaurencic-gallery-resized.jpg");}
+    .fast-food{background-image: url("pexels-jonathanborba-fast-food-resized.jpg");}
+    .bar{background-image: url("pexels-nastyasensei-bar-resized.jpg"); color: white;}
+    .mall{background-image: url("pexels-magda-ehlers-pexels-mall-resized.jpg");}
+}
+@media screen and (min-width: 1201px) {
+    nav
+    {height: 70px;}
+    .name
+    {margin: 0px 30px; font-size: 3rem;}
+    .nav-button
+    {height: 50px; width: 80px; margin: 0px 50px; font-size: 3rem;}
+    .hero
+    {height: 1000px; width: 100%; padding: 100px 0px;}
+    .hero-left, .hero-right
+    {height: 100%; width: 50%;}
+    .hero-main-text
+    {margin: 50px; color: rgb(109, 105, 49); font-size: 6rem; letter-spacing: 0px;}
+    .hero-sub-text
+    {margin: 150px 20px 20px;}
+    .topic-box
+    {height: 200px; width: 28%; margin: 5px; padding: 0px 10px; background-color: black; background-position: center; background-attachment: local; background-size: cover;}
+    .fine-dining:hover{background-image: url("pexels-adrien-olichon-fine-dining-resized.jpg"); color: white;}
+    .beaches:hover{background-image: url("pexels-fabianwiktor-beaches-resized.jpg");}
+    .coffee:hover{background-image: url("pexels-chevanon-coffee-resized.jpg");}
+    .galleries:hover{background-image: url("pexels-unalaurencic-gallery-resized.jpg");}
+    .fast-food:hover{background-image: url("pexels-jonathanborba-fast-food-resized.jpg");}
+    .bar:hover{background-image: url("pexels-nastyasensei-bar-resized.jpg"); color: white;}
+    .mall:hover{background-image: url("pexels-magda-ehlers-pexels-mall-resized.jpg");}
+}
+
+.section{
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    border-bottom: 2px solid black;
+}
+.section-left{
+    border-right: 2px solid black;
+}
+.section-main-text{
+    margin: 50px 20px;
+    font-family: "sniglet regular";
+    color: rgb(109, 105, 49);
+}
+.section-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    font-size: 1.7rem;
+}
+.section-right p{
+    margin: 20px;
+}
+.section-right::-webkit-scrollbar{
+    display: none;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 450px) {
+    .section-left
+    {width: 100%;}
+    .section-right
+    {width: 100%;}
+    .section-title
+    {margin: 50px 20px; font-size: 4rem;}
+    .section-main-text
+    {font-size: 2rem;}
+    .section-right img
+    {height: 400px; width: 95%; margin: 30px auto; object-fit: cover;}
+    ul
+    {width: 90%; color: rgb(109, 105, 49);}
+    .gallery
+    {width: 95%; margin: 20px auto;}
+    .gallery img
+    {height: 100px; width: 100px; margin: 3px; object-fit: cover;}
+    .map
+    {height: 300px; width: 95%; margin: 50px auto; border: none;}
+}
+@media screen and (min-width: 451px) and (max-width: 650px) {
+    
+}
+@media screen and (min-width: 651px) and (max-width: 850px) {
+    
+}
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+    
+}
+@media screen and (min-width: 1201px) {
+    .section-left, .section-right
+    {height: 120vh; width: 49.5%;}
+    .section-title
+    {margin: 50px 20px; font-size: 5rem;}
+    .section-main-text
+    {font-size: 3rem;}
+    .section-right img
+    {height: 400px; width: 95%; margin: 30px auto; object-fit: cover;}
+    ul
+    {width: 80%; color: rgb(109, 105, 49);}
+    .gallery
+    {width: 95%; margin: 20px auto;}
+    .gallery img
+    {height: 150px; width: 150px; margin: 5px; object-fit: cover;}
+    .map
+    {height: 500px; width: 95%; margin: 50px auto;}
+}
