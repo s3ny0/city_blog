@@ -15,7 +15,7 @@ h1{
   font-size: 3rem;
   font-family: "20db";
   letter-spacing: 3px;
-  color: #31889e;
+  color: #323232;
 }
 p{
   font-size: 1.5rem;
@@ -79,7 +79,7 @@ nav hr{
 /*HERO SECTION*/
 .hero{
   width: 100%;
-  background-color: #C7AC40;
+  background-color: #bf0d13;
 }
 .hero-top{
   display: grid;
