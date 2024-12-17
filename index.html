@@ -8,27 +8,20 @@
     <!--AOS Library-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Accra Vibes | Homepage</title>
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>accra vibes - homepage</title>
 </head>
 <body>
     <div class="hero">
         <nav>
-            <button><i class="fi fi-ss-bars-sort"></i></button>
-            <div class="nav-buttons">
-                <hr><button class="nav-button"><span>history</span></button><hr>
-                <button class="nav-button"><span>about</span></button><hr>
-                <button class="nav-button"><span>contact us</span><i class="fi fi-ss-arrow-up-right" style="margin-left: 20px;"></i></button>
-            </div>
+            <button id="dropdown-button"><i class="fi fi-ss-bars-sort"></i></button>
+            <button class="nav-button"><span>contact us</span><i class="fi fi-ss-arrow-up-right" style="margin-left: 10px;"></i></button>
         </nav>
         <div class="hero-top">
             <img class="hero-top-img" src="images/sandbox_006-ref(seek_ghana).jpg" alt="an image of 2 girls sitting by a pool side">
             <div class="hero-description">
                 <h1 class="title">accra vibes</h1>
-                <p>
-                  Located on the southern coast along the Gulf of Guinea in the Greater Accra Region, Accra covers an area of about 225 
-                  square kilometers (87 square miles) and sits at an elevation of 0 to 61 meters (200 feet) above sea level. This is Ghana's 
-                  largest city, with a population of around 2.9 million. 
-                </p>
                 <p>
                     Explore the rich culinary scene, find the best places to stay, and uncover top destinations that showcase the city's unique culture. 
                     Whether you're a local or a visitor, navigate the exciting experiences that this dynamic city has to offer. Embrace the energy, flavors, 
@@ -42,23 +35,8 @@
         </div>
     </div>
     <div class="history">
-        <img class="history-img" src="images/z-sarpong-unsplash (1).jpg" alt="" data-aos="zoom-in" data-aos-duration="900">
         <div class="history-text">
-            <h1 class="heading">a story of hardwork and resilience</h1>
-            <p>
-                Accra, the capital city of Ghana, has evolved from a small coastal settlement into a 
-                major African metropolis, marked by its colonial past, fight for independence, and rapid 
-                modernization. While its early history is tied to indigenous Ga communities, the city’s 
-                modern growth is rooted in the colonial era and its post-independence development. 
-                "Accra", derived from the Akan word "Nkran," means ants, likely referring to the industrious 
-                nature of the Ga people who originally settled the area in the 15th century. European interest 
-                in Accra began in the 17th century when the Portuguese, Dutch, and later the British, established 
-                trading posts along the coast, trading in gold, ivory, and slaves. In 1877, Accra replaced Cape Coast 
-                as the capital of the British Gold Coast colony. This period saw significant development, with colonial 
-                architecture like Ussher Fort, James Fort, and Christianborg Castle (Osu Castle) being constructed. 
-                The British further developed the city’s infrastructure, with railways, roads, and public buildings reflecting 
-                its growing importance as a colonial hub.
-            </p>
+            <h1 class="heading">a story of hardwork & resilience</h1>
             <p>
                 Since the 1980s, Accra has undergone rapid urbanization and economic transformation. It is now a bustling 
                 center for commerce, culture, and politics, playing a significant role in West Africa’s economic landscape. 
@@ -68,18 +46,18 @@
                 As the city continues to modernize, challenges such as housing shortages, traffic congestion, and urban sprawl have emerged, 
                 but the government and private sector are investing in solutions to address these issues .
             </p>
-            <button><span>continue</span><i class="fi fi-ss-arrow-right" style="margin-left: 20px;"></i></button>
+            <button><span>read</span><i class="fi fi-ss-arrow-right" style="margin-left: 20px;"></i></button>
         </div>
     </div>
     <div id="explore">
         <div class="topic">
             <div class="topic-info">
                 <h1 class="heading">a culinary adventure</h1>
-                <button><span>explore</span><i class="fi fi-ss-arrow-up-right" style="margin-left: 20px;"></i></button>
+                <a href="food.html"><button><span>explore</span><i class="fi fi-ss-arrow-right" style="margin-left: 20px;"></i></button></a>
             </div>
             <img class="topic-img" src="images/polo_club_restaurant_004-ref(polo_club_restaurant).webp" alt="a dinner table with wine and appetizers served" data-aos="zoom-in" data-aos-duration="900">
             <div class="topic-extra">
-                <p class="topic-description">fine dinng | fast food & takeout | boutique restaurants | coffee & confections | street food</p>
+                <p class="topic-description"><a href="food.html#fine-dining">fine dining</a> | <a href="food.html#fast-food">fast food & takeout</a> | <a href="food.html#boutique-restaurants">boutique restaurants</a> | <a href="food.html#coffee">coffee & confections</a> | <a href="food.html#street-food">street food</a></p>
                 <img src="images/polo_club_restauranat_001-ref(polo_club_restaurant).jpg" alt="" data-aos="flip-left" data-aos-duration="900">
                 <img src="images/bella_afrik_001-ref(trip_advisor).jpg" alt="" data-aos="flip-left" data-aos-duration="900">
             </div>
@@ -158,12 +136,80 @@
                 <p>twitter</p>
                 <p>youtube</p>
             </div>
+            <h1>accra vibes</h1>
         </div>
         <hr>
         <div class="footer-bottom">
-            <h1>ACCRA VIBES</h1>
         </div>
     </footer>
+
+    <!--Other sections-->
+    
+    <!--Dropdown menu-->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <button class="close-button" id="close-menu"><i class="fi fi-ss-circle-xmark"></i></button>
+        <div class="menu-buttons">
+            <h1>EXPLORE</h1>
+            <h1>HISTORY</h1>
+            <h1>GALLERY</h1>
+        </div>
+    </div>
+    <!--Jquery for popup about section-->
+    <script>
+        $(document).ready(function () {
+          // Show the dropdown menu
+          $("#dropdown-button").click(function () {
+            $("#dropdown-menu").slideDown(800); // Smooth fade-in effect
+          });
+    
+          // Hide the dropdown menu
+          $("#close-menu").click(function () {
+            $("#dropdown-menu").slideUp(800); // Smooth fade-out effect
+          });
+        });
+    </script>
+
+    <!--About section-->
+    <div class="about" id="about">
+        <div class="about-card">
+            <h1>an indepth city guide</h1>
+            <p>
+                Welcome to accra vibes, the ultimate guide to experiencing the heartbeat of Ghana’s vibrant capital. 
+                Whether you’re a curious traveler looking to explore the city for the first time or a native searching 
+                for fresh insights, accra vibes is here to inspire and inform. We’re dedicated to showcasing the rich 
+                culture, bustling energy, and hidden treasures that make Accra unique, providing practical tips and 
+                detailed guides to help you plan your journey with ease.
+            </p>
+            <p>
+                Our blog delves deep into the city’s best-kept secrets, from iconic landmarks and colorful markets to 
+                cozy hangouts and off-the-beaten-path gems. Looking for the best local dishes to try? Need help navigating 
+                Accra’s dynamic nightlife or understanding public transportation? We’ve got you covered. At accra vibes, 
+                we aim to be more than just a travel guide – we’re your companion in uncovering the stories, flavors, and 
+                rhythms that define this captivating city.
+            </p>
+            <p>
+                Every post is crafted to celebrate Accra’s diversity and charm, offering something for everyone. Whether 
+                you’re mapping out your itinerary or simply looking to fall in love with the city all over again, accra vibes 
+                is your trusted resource. Let us help you discover the soul of Accra – one vibe at a time!
+            </p>
+        </div>
+    </div>
+
+    <!--Jquery for popup about section-->
+    <script>
+        $(document).ready(function () {
+          // Show the popup
+          $("#about-trigger").click(function () {
+            $("#about").fadeIn(1000); // Smooth fade-in effect
+          });
+    
+          // Hide the popup
+          $("#about-close").click(function () {
+            $("#about").fadeOut(1000); // Smooth fade-out effect
+          });
+        });
+    </script>
+
     <!--Initialize AOS-->
     <script>
         AOS.init();
